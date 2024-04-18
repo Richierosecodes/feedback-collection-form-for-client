@@ -36,13 +36,14 @@
     form {
         margin: 10px; 
     }
+    
     label {
-        margin-bottom: 5px;
+        margin: 5px
         
     }
 
     .container {
-        background-color: rgb(232, 224, 224);
+        background-color: rgb(249, 225, 225);
         font-size: 14px;
         margin: 10px;
         border: 10px; 
@@ -61,7 +62,7 @@
     }
 
     .field-group {
-        width: 600px;
+        max-width: 100%;
         position:relative;
         padding-top: 15px;
         margin: 20px;
@@ -114,32 +115,177 @@
         color: #ef5a03;
     }
 
+    button {
+        background-color: rgb(0, 0, 243);
+        color: white;
+        padding: 8px 16px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+    textarea {
+        margin: 10px;
+        font-size: 16px;
+        border: 2px solid #999999;
+        border-radius: 6px;
+    }
+
+    @media (min-width:400px) {
+        h1 {
+            font-size: 32px;
+        }
+    }
+        .container {
+            flex-direction: column;
+        }
+
+        input[type="text"],textarea {
+            width: 90%; 
+    }
+
+    textarea {
+        height: 100px;
+        margin: 5px 10px 10px 10px;
+        width:  80%;
+
+    }
+
+    
+
      
 </style>
 <body>
     <div class="body">
         <div class="container">
-            <section>
-                <h1>
-                    Feedback Collection Form: Share Your Experience with Us.
-                </h1>
-
-                <h2>
-                    Thank you for taking the time to provide feedback. Your responses will help us improve our services/products and bettet understand your needs and preferences. 
-                    Your input is valuable to us, and we appreciate your participation in this feedback collection process.
-                </h2>
-
-                <hr />
-
-                <span class="required-question"> *Indicates required question </span>
+           
+                <section>
+                    <h1>
+                        Feedback Collection Form: Share Your Experience with Us.
+                    </h1>
+    
+                    <h2>
+                        Thank you for taking the time to provide feedback. Your responses will help us improve our services/products and bettet understand your needs and preferences. 
+                        Your input is valuable to us, and we appreciate your participation in this feedback collection process.
+                    </h2>
+    
+                    <hr />
+    
+                    <span class="required-question"> * Indicates required question </span>
+                    <br />
+                    <br />
+                </section>
+    
+                <section>
+                    <p>How would you rate your overall experience during your stay at our property?</p>
+    
+                <form>
+                        <div>
+                            <input type="checkbox" name="info" id="excellent">
+                            <label for="excellent"> Excellent </label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" name="info" id="good">
+                            <label for="good"> Good </label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" name="info" id="average">
+                            <label for="average"> Average </label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" name="info" id="poor">
+                            <label for="poor"> Poor </label>
+                        </div>            
+                </form>
                 <br />
+                </section>
+    
+                <section>
+                    <p>What factors influenced your decision to choose our property for your stay?</p>
+    
+                <form>
+                        <div>
+                            <input type="checkbox" name="info" id="location">
+                            <label for="location"> Location </label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" name="info" id="amenities">
+                            <label for="amenities"> Amenities </label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" name="info" id="pricing">
+                            <label for="pricing"> Pricing </label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" name="info" id="reviews">
+                            <label for="reviews"> Reviews </label>
+                        </div>    
+                        
+                        <div>
+                            <input type="checkbox" name="info" id="recommendations">
+                            <label for="recommendations"> Recommendations </label>
+                        </div>            
+    
+                        <div>
+                            <input type="checkbox" name="info" id="others">
+                            <label for="others"> Others (Please specify) </label>
+                        </div>            
+                </form>
                 <br />
-            </section>
-
-            <section>
-                <p>How would you rate your overall experience during your stay at our property?</p>
-
-            <form>
+                </section>
+    
+                <section>
+                    <p class="required">Were you satisfied with the cleanliness and maintenance of the property?</p>
+    
+                <form>
+                        <div>
+                            <input type="checkbox" name="info" id="very satisfied">
+                            <label for="very satisfied"> Very satisfied </label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" name="info" id="satisfied">
+                            <label for="satisfied"> Satisfied </label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" name="info" id="neutral">
+                            <label for="neutral"> Neutral </label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" name="info" id="dissatisfied">
+                            <label for="dissatisfied"> Dissatisfied </label>
+                        </div>    
+                        
+                        <div>
+                            <input type="checkbox" name="info" id="very dissatisfied">
+                            <label for="very dissatisfied"> Very dissatisfied </label>
+                        </div>            
+    
+                </form>
+                <br />
+                </section>
+    
+                <section>
+                    <p class="required">If you were not satisfied with the cleanliness and maintanance, please tell us what the issue was.</p>
+                    <div class="field-group">
+                        <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
+                        <label for="name" class="input-label"></label>
+                    </div>
+                    <br />
+                </section>
+               
+    
+                <section>
+                    <p>How would you rate the comfort and quality of the accomodation (beds, furniture, amenities, etc)?</p>
+    
+                <form>
                     <div>
                         <input type="checkbox" name="info" id="excellent">
                         <label for="excellent"> Excellent </label>
@@ -159,206 +305,99 @@
                         <input type="checkbox" name="info" id="poor">
                         <label for="poor"> Poor </label>
                     </div>            
-            </form>
-            <br />
-            </section>
-
-            <section>
-                <p>What factors influenced your decision to choose our property for your stay?</p>
-
-            <form>
+                </form>
+                <br />
+                </section>
+    
+                <section>
+                    <p>If your experience with the comfort and quality of the accommodation (beds, furniture, amenities, etc.) was not good,
+                        please tell us what the issue was and how we would have done it better.
+                    </p>
+                    <div class="field-group">
+                        <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
+                        <label for="name" class="input-label"></label>
+                    </div>
+                    <br />
+                </section>
+    
+                <section>
+                    <p>Were there any issues or concerns with the accommodation that you would like to highlight?</p>
+                    <div class="field-group">
+                        <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
+                        <label for="name" class="input-label"></label>
+                    </div>
+                    <br />
+                </section>
+    
+                <section>
+                    <p>Were our team members friendly, helpful, and responsive to your needs?</p>
+    
+                <form>
                     <div>
-                        <input type="checkbox" name="info" id="location">
-                        <label for="location"> Location </label>
+                        <input type="checkbox" name="info" id="excellent">
+                        <label for="excellent"> Yes, they were excellent </label>
                     </div>
     
                     <div>
-                        <input type="checkbox" name="info" id="amenities">
-                        <label for="amenities"> Amenities </label>
+                        <input type="checkbox" name="info" id="good">
+                        <label for="good"> Yes, they were satisfactory </label>
                     </div>
     
                     <div>
-                        <input type="checkbox" name="info" id="pricing">
-                        <label for="pricing"> Pricing </label>
+                        <input type="checkbox" name="info" id="average">
+                        <label for="average"> No, they could improve </label>
+                    </div>
+                </form>
+                <br />
+                </section>
+    
+                <section>
+                    <p>Do you have any suggestion(s) or recommendation(s) for improving our property and services? </p>
+                    <div class="field-group">
+                        <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
+                        <label for="name" class="input-label"></label>
+                    </div>
+                    <br />
+                </section>
+    
+                <section>
+                    <p>Would you recommend our property to friends or family?</p>
+    
+                <form>
+                    <div>
+                        <input type="checkbox" name="info" id="excellent">
+                        <label for="excellent"> Yes, definitely </label>
                     </div>
     
                     <div>
-                        <input type="checkbox" name="info" id="reviews">
-                        <label for="reviews"> Reviews </label>
-                    </div>    
+                        <input type="checkbox" name="info" id="good">
+                        <label for="good"> Maybe </label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" name="info" id="average">
+                        <label for="average"> No </label>
+                    </div>
+                </form>
+                <br />
+                </section>
+    
+                <section>
+                    <p>Please share any additional comments, feedback, or thoughts about your stay that you would like us to know.</p>
                     
-                    <div>
-                        <input type="checkbox" name="info" id="recommendations">
-                        <label for="recommendations"> Recommendations </label>
-                    </div>            
-
-                    <div>
-                        <input type="checkbox" name="info" id="others">
-                        <label for="others"> Others (Please specify) </label>
-                    </div>            
-            </form>
-            <br />
-            </section>
-
-            <section>
-                <p class="required">Were you satisfied with the cleanliness and maintenance of the property?</p>
-
-            <form>
-                    <div>
-                        <input type="checkbox" name="info" id="very satisfied">
-                        <label for="very satisfied"> Very satisfied </label>
-                    </div>
-    
-                    <div>
-                        <input type="checkbox" name="info" id="satisfied">
-                        <label for="satisfied"> Satisfied </label>
-                    </div>
-    
-                    <div>
-                        <input type="checkbox" name="info" id="neutral">
-                        <label for="neutral"> Neutral </label>
-                    </div>
-    
-                    <div>
-                        <input type="checkbox" name="info" id="dissatisfied">
-                        <label for="dissatisfied"> Dissatisfied </label>
-                    </div>    
+                   <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Message"></textarea>
                     
-                    <div>
-                        <input type="checkbox" name="info" id="very dissatisfied">
-                        <label for="very dissatisfied"> Very dissatisfied </label>
-                    </div>            
-
-            </form>
-            <br />
-            </section>
-
-            <section>
-                <p class="required">If you were not satisfied with the cleanliness and maintanance, please tell us what the issue was.</p>
-                <div class="field-group">
-                    <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
-                    <label for="name" class="input-label"></label>
-                </div>
+                    <br />
+                </section>
                 <br />
-            </section>
-           
-
-            <section>
-                <p>How would you rate the comfort and quality of the accomodation (beds, furniture, amenities, etc)?</p>
-
-            <form>
-                <div>
-                    <input type="checkbox" name="info" id="excellent">
-                    <label for="excellent"> Excellent </label>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="info" id="good">
-                    <label for="good"> Good </label>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="info" id="average">
-                    <label for="average"> Average </label>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="info" id="poor">
-                    <label for="poor"> Poor </label>
-                </div>            
-            </form>
-            <br />
-            </section>
-
-            <section>
-                <p>If your experience with the comfort and quality of the accommodation (beds, furniture, amenities, etc.) was not good,
-                    please tell us what the issue was and how we would have done it better.
-                </p>
-                <div class="field-group">
-                    <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
-                    <label for="name" class="input-label"></label>
-                </div>
-                <br />
-            </section>
-
-            <section>
-                <p>Were there any issues or concerns with the accommodation that you would like to highlight?</p>
-                <div class="field-group">
-                    <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
-                    <label for="name" class="input-label"></label>
-                </div>
-                <br />
-            </section>
-
-            <section>
-                <p>Were our team members friendly, helpful, and responsive to your needs?</p>
-
-            <form>
-                <div>
-                    <input type="checkbox" name="info" id="excellent">
-                    <label for="excellent"> Yes, they were excellent </label>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="info" id="good">
-                    <label for="good"> Yes, they were satisfactory </label>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="info" id="average">
-                    <label for="average"> No, they could improve </label>
-                </div>
-            </form>
-            <br />
-            </section>
-
-            <section>
-                <p>Do you have any suggestion(s) or recommendation(s) for improving our property and services? </p>
-                <div class="field-group">
-                    <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
-                    <label for="name" class="input-label"></label>
-                </div>
-                <br />
-            </section>
-
-            <section>
-                <p>Would you recommend our property to friends or family?</p>
-
-            <form>
-                <div>
-                    <input type="checkbox" name="info" id="excellent">
-                    <label for="excellent"> Yes, definitely </label>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="info" id="good">
-                    <label for="good"> Maybe </label>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="info" id="average">
-                    <label for="average"> No </label>
-                </div>
-            </form>
-            <br />
-            </section>
-
-            <section>
-                <p>Please share any additional comments, feedback, or thoughts about your stay that you would like us to know. </p>
-                <div class="field-group">
-                    <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
-                    <label for="name" class="input-label"></label>
-                </div>
-                <br />
-            </section>
-            <br />
-           
-
-            <button class="btn-btn-primary">Submit</button>      
-        </div>     
-    </div>
-
-    <script></script>
+               
     
+                <button type="submit" id="submit"> Submit your Feedback </button>      
+            </div>     
+        </div>
+
+            
+
+   
 </body>
 </html>
