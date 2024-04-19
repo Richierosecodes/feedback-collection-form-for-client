@@ -36,7 +36,7 @@
         margin: 10px;
     }
 
-    form {
+    main {
         margin: 10px; 
     }
     
@@ -126,7 +126,7 @@
         align-items: center;
         color: white;
         padding: 8px 16px;
-        margin: 10px;
+        margin: 5x;
         text-align: center;
         font-weight: bold;
         box-shadow: none;
@@ -163,16 +163,14 @@
         margin: 5px 10px 10px 10px;
         width:  80%;
 
-    }
-
-    
-
+    } 
      
 </style>
+
 <body>
     <div class="body">
         <div class="container">
-           
+            <form>
                 <section>
                     <h1>
                         Feedback Collection Form: Share Your Experience with Us.
@@ -186,14 +184,15 @@
                     <hr />
     
                     <span class="required-question"> * Indicates required question </span>
+                    <hr />
                     <br />
                     <br />
                 </section>
     
                 <section>
-                    <p>How would you rate your overall experience during your stay at our property?</p>
+                    <p> How would you rate your overall experience during your stay at our property?</p>
     
-                <form>
+                <main>
                         <div>
                             <input type="checkbox" name="info" id="excellent">
                             <label for="excellent"> Excellent </label>
@@ -213,14 +212,14 @@
                             <input type="checkbox" name="info" id="poor">
                             <label for="poor"> Poor </label>
                         </div>            
-                </form>
+                    </main>
                 <br />
                 </section>
     
                 <section>
                     <p>What factors influenced your decision to choose our property for your stay?</p>
     
-                <form>
+                <main>
                         <div>
                             <input type="checkbox" name="info" id="location">
                             <label for="location"> Location </label>
@@ -250,14 +249,14 @@
                             <input type="checkbox" name="info" id="others">
                             <label for="others"> Others (Please specify) </label>
                         </div>            
-                </form>
+                    </main>
                 <br />
                 </section>
     
                 <section>
                     <p class="required">Were you satisfied with the cleanliness and maintenance of the property?</p>
     
-                <form>
+                <main>
                         <div>
                             <input type="checkbox" name="info" id="very satisfied">
                             <label for="very satisfied"> Very satisfied </label>
@@ -283,7 +282,7 @@
                             <label for="very dissatisfied"> Very dissatisfied </label>
                         </div>            
     
-                </form>
+                    </main>
                 <br />
                 </section>
     
@@ -300,7 +299,7 @@
                 <section>
                     <p>How would you rate the comfort and quality of the accomodation (beds, furniture, amenities, etc)?</p>
     
-                <form>
+                <main>
                     <div>
                         <input type="checkbox" name="info" id="excellent">
                         <label for="excellent"> Excellent </label>
@@ -320,7 +319,7 @@
                         <input type="checkbox" name="info" id="poor">
                         <label for="poor"> Poor </label>
                     </div>            
-                </form>
+                </main>
                 <br />
                 </section>
     
@@ -347,7 +346,7 @@
                 <section>
                     <p>Were our team members friendly, helpful, and responsive to your needs?</p>
     
-                <form>
+                <main>
                     <div>
                         <input type="checkbox" name="info" id="excellent">
                         <label for="excellent"> Yes, they were excellent </label>
@@ -362,7 +361,7 @@
                         <input type="checkbox" name="info" id="average">
                         <label for="average"> No, they could improve </label>
                     </div>
-                </form>
+                </main>
                 <br />
                 </section>
     
@@ -378,7 +377,7 @@
                 <section>
                     <p>Would you recommend our property to friends or family?</p>
     
-                <form>
+                <main>
                     <div>
                         <input type="checkbox" name="info" id="excellent">
                         <label for="excellent"> Yes, definitely </label>
@@ -393,7 +392,7 @@
                         <input type="checkbox" name="info" id="average">
                         <label for="average"> No </label>
                     </div>
-                </form>
+                </main>
                 <br />
                 </section>
     
@@ -405,14 +404,10 @@
                     <br />
                 </section>
                 <br />
-               
-    
                 <button type="submit" id="submit"> Submit your Feedback </button>      
+            </form>
+                
             </div>     
         </div>
-
-            
-
-   
 </body>
 </html>
