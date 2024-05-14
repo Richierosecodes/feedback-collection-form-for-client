@@ -127,7 +127,7 @@
         align-items: center;
         color: white;
         padding: 8px 16px;
-        margin: 5x;
+        margin: 20px;
         text-align: center;
         font-weight: bold;
         box-shadow: none;
@@ -140,7 +140,7 @@
     }
 
     textarea {
-        margin: 10px;
+        margin: 20px;
         font-size: 16px;
         border: 2px solid #999999;
         border-radius: 6px;
@@ -161,7 +161,7 @@
 
     textarea {
         height: 100px;
-        margin: 5px 10px 10px 10px;
+        margin: 5px 10px 10px 20px;
         width:  80%;
 
     } 
@@ -169,9 +169,12 @@
 </style>
 
 <body>
-    <div class="body">
+   
         <div class="container">
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="ffadf429-7d3f-43ec-9e3d-3bf48c1dea47">
                
                 <section>
                     <h1>
@@ -198,22 +201,22 @@
     
                 <main>
                         <div>
-                            <input type="checkbox" name="info" id="excellent">
+                            <input type="checkbox" name="excellent" id="excellent">
                             <label for="excellent"> Excellent </label>
                         </div>
         
                         <div>
-                            <input type="checkbox" name="info" id="good">
+                            <input type="checkbox" name="good" id="good">
                             <label for="good"> Good </label>
                         </div>
         
                         <div>
-                            <input type="checkbox" name="info" id="average">
+                            <input type="checkbox" name="average" id="average">
                             <label for="average"> Average </label>
                         </div>
         
                         <div>
-                            <input type="checkbox" name="info" id="poor">
+                            <input type="checkbox" name="poor" id="poor">
                             <label for="poor"> Poor </label>
                         </div>            
                     </main>
@@ -225,32 +228,32 @@
     
                 <main>
                         <div>
-                            <input type="checkbox" name="info" id="location">
+                            <input type="checkbox" name="location" id="location">
                             <label for="location"> Location </label>
                         </div>
         
                         <div>
-                            <input type="checkbox" name="info" id="amenities">
+                            <input type="checkbox" name="amenities" id="amenities">
                             <label for="amenities"> Amenities </label>
                         </div>
         
                         <div>
-                            <input type="checkbox" name="info" id="pricing">
+                            <input type="checkbox" name="pricing" id="pricing">
                             <label for="pricing"> Pricing </label>
                         </div>
         
                         <div>
-                            <input type="checkbox" name="info" id="reviews">
+                            <input type="checkbox" name="reviews" id="reviews">
                             <label for="reviews"> Reviews </label>
                         </div>    
                         
                         <div>
-                            <input type="checkbox" name="info" id="recommendations">
+                            <input type="checkbox" name="recommendations" id="recommendations">
                             <label for="recommendations"> Recommendations </label>
                         </div>            
     
                         <div>
-                            <input type="checkbox" name="info" id="others">
+                            <input type="checkbox" name="others" id="others">
                             <label for="others"> Others (Please specify) </label>
                         </div>            
                     </main>
@@ -262,27 +265,27 @@
     
                 <main>
                         <div>
-                            <input type="checkbox" name="info" id="very satisfied">
+                            <input type="checkbox" name="very satisfied" id="very satisfied">
                             <label for="very satisfied"> Very satisfied </label>
                         </div>
         
                         <div>
-                            <input type="checkbox" name="info" id="satisfied">
+                            <input type="checkbox" name="satisfied" id="satisfied">
                             <label for="satisfied"> Satisfied </label>
                         </div>
         
                         <div>
-                            <input type="checkbox" name="info" id="neutral">
+                            <input type="checkbox" name="neutral" id="neutral">
                             <label for="neutral"> Neutral </label>
                         </div>
         
                         <div>
-                            <input type="checkbox" name="info" id="dissatisfied">
+                            <input type="checkbox" name="dissatisfied" id="dissatisfied">
                             <label for="dissatisfied"> Dissatisfied </label>
                         </div>    
                         
                         <div>
-                            <input type="checkbox" name="info" id="very dissatisfied">
+                            <input type="checkbox" name="very dissatisfied" id="very dissatisfied">
                             <label for="very dissatisfied"> Very dissatisfied </label>
                         </div>            
     
@@ -293,8 +296,8 @@
                 <section>
                     <p class="required">If you were not satisfied with the cleanliness and maintanance, please tell us what the issue was.</p>
                     <div class="field-group">
-                        <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
-                        <label for="name" class="input-label"></label>
+                        <input type="text" name="your-answer" class="input-field" placeholder="Your Answer" autocomplete="off">
+                        <label for="your-answer" class="input-label"></label>
                     </div>
                     <br />
                 </section>
@@ -305,22 +308,22 @@
     
                 <main>
                     <div>
-                        <input type="checkbox" name="info" id="excellent" value="checked">
+                        <input type="checkbox" name="excellent" id="excellent">
                         <label for="excellent"> Excellent </label>
                     </div>
     
                     <div>
-                        <input type="checkbox" name="info" id="good" value="checked">
+                        <input type="checkbox" name="good" id="good">
                         <label for="good"> Good </label>
                     </div>
     
                     <div>
-                        <input type="checkbox" name="info" id="average" value="checked">
+                        <input type="checkbox" name="average" id="average">
                         <label for="average"> Average </label>
                     </div>
     
                     <div>
-                        <input type="checkbox" name="info" id="poor" value="checked">
+                        <input type="checkbox" name="poor" id="poor">
                         <label for="poor"> Poor </label>
                     </div>            
                 </main>
@@ -332,8 +335,8 @@
                         please tell us what the issue was and how we would have done it better.
                     </p>
                     <div class="field-group">
-                        <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
-                        <label for="name" class="input-label"></label>
+                        <input type="text" name="your-answer" class="input-field" placeholder="Your Answer" autocomplete="off">
+                        <label for="your-answer" class="input-label"></label>
                     </div>
                     <br />
                 </section>
@@ -341,8 +344,8 @@
                 <section>
                     <p>Were there any issues or concerns with the accommodation that you would like to highlight?</p>
                     <div class="field-group">
-                        <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
-                        <label for="name" class="input-label"></label>
+                        <input type="text" name="your-answer" class="input-field" placeholder="Your Answer" autocomplete="off">
+                        <label for="your-answer" class="input-label"></label>
                     </div>
                     <br />
                 </section>
@@ -352,17 +355,17 @@
     
                 <main>
                     <div>
-                        <input type="checkbox" name="info" id="excellent" value="checked">
+                        <input type="checkbox" name="excellent" id="excellent">
                         <label for="excellent"> Yes, they were excellent </label>
                     </div>
     
                     <div>
-                        <input type="checkbox" name="info" id="good" value="checked">
+                        <input type="checkbox" name="good" id="good">
                         <label for="good"> Yes, they were satisfactory </label>
                     </div>
     
                     <div>
-                        <input type="checkbox" name="info" id="average" value="checked">
+                        <input type="checkbox" name="average" id="average">
                         <label for="average"> No, they could improve </label>
                     </div>
                 </main>
@@ -372,8 +375,8 @@
                 <section>
                     <p>Do you have any suggestion(s) or recommendation(s) for improving our property and services? </p>
                     <div class="field-group">
-                        <input type="text" name="name" class="input-field" placeholder="Your Answer" autocomplete="off">
-                        <label for="name" class="input-label"></label>
+                        <input type="text" name="your-answer" class="input-field" placeholder="Your Answer" autocomplete="off">
+                        <label for="your-answer" class="input-label"></label>
                     </div>
                     <br />
                 </section>
@@ -383,17 +386,17 @@
     
                 <main>
                     <div>
-                        <input type="checkbox" name="info" id="excellent" value="checked">
+                        <input type="checkbox" name="excellent" id="excellent">
                         <label for="excellent"> Yes, definitely </label>
                     </div>
     
                     <div>
-                        <input type="checkbox" name="info" id="good" value="checked">
+                        <input type="checkbox" name="good" id="good">
                         <label for="good"> Maybe </label>
                     </div>
     
                     <div>
-                        <input type="checkbox" name="info" id="average" value="checked">
+                        <input type="checkbox" name="average" id="average">
                         <label for="average"> No </label>
                     </div>
                 </main>
@@ -403,11 +406,14 @@
                 <section>
                     <p>Please share any additional comments, feedback, or thoughts about your stay that you would like us to know.</p>
                     
-                   <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Message"></textarea>></textarea>
+                   <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Message"></textarea>
+                   <label for="Message" class="input-label"></label>
                     
                     <br />
                 </section>
                 <br />
+
+                
                 <button type="submit" id="submit"> Submit your Feedback </button>      
             </form>
                 
