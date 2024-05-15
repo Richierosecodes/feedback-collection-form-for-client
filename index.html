@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Feedback Collection Form</title>
     
 </head>
@@ -171,7 +172,7 @@
 <body>
    
         <div class="container">
-            <form>
+            <form action="https://stayshores.com" method="POST">
                
                 <section>
                     <h1>
@@ -404,9 +405,8 @@
                     <p>Please share any additional comments, feedback, or thoughts about your stay that you would like us to know.</p>
                     
                    <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Message"></textarea>
-                   <label for="Message" class="input-label"></label>
+                   <label for="Message" class="input-label">
                     
-                    <br />
                 </section>
                 <br />
 
@@ -416,6 +416,31 @@
                 
             </div>     
         </div>
+
+        <script>
+            function submitForm() {
+                event.preventDefault();
+
+            var form = document.querySelector('form');
+            var submit = document.querySelector('#submit');
+            var input = document.querySelectorAll('input');
+            var textarea = document.querySelector('#Message');
+            var label = document.querySelectorAll('.input-label');
+            var section = document.querySelectorAll('section');
+            var main = document.querySelectorAll('main');
+            var p = document.querySelectorAll('p');
+            var div = document.querySelectorAll('div');
+
+            alert("Thank you, your response has been submitted");
+           
+
+            
+                const form = document.getElementById("form");
+                form.addEventListener("submit", function(event) {
+                   
+            });
+        }
+        </script>
 
        
 
